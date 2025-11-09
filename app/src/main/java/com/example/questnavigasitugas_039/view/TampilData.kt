@@ -41,3 +41,9 @@ fun TampilDataScreen(
                 )
             )
         },
+        bottomBar = {
+            BottomNavigation(
+                onNavigateToDashboard = onNavigateToDashboard,
+                onNavigateToForm = onNavigateToForm
+            )
+        }
