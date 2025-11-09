@@ -57,3 +57,35 @@ fun FormulirScreen(
                 modifier = Modifier.padding(bottom = 24.dp)
             )
 
+            // --- Form Input (Tidak ada perubahan di sini) ---
+            FormTextField(
+                label = "NAMA LENGKAP",
+                value = namaLengkap,
+                onValueChange = { namaLengkap = it },
+                placeholder = "Isikan nama lengkap"
+            )
+            Spacer(modifier = Modifier.height(16.dp))
+            Text("JENIS KELAMIN", style = MaterialTheme.typography.labelMedium, color = Color.LightGray)
+            Row(modifier = Modifier.fillMaxWidth()) {
+                jenisKelaminOptions.forEach { option ->
+                    Row(
+                        Modifier
+                            .selectable(
+                                selected = (selectedJenisKelamin == option),
+                                onClick = { selectedJenisKelamin = option }
+                            )
+                            .padding(end = 16.dp),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        RadioButton(
+                            selected = (selectedJenisKelamin == option),
+                            onClick = { selectedJenisKelamin = option },
+                            colors = RadioButtonDefaults.colors(
+                                selectedColor = Color(0xFF9D4EDD),
+                                unselectedColor = Color.LightGray
+                            )
+                        )
+                        Text(text = option, color = Color.White)
+                    }
+                }
+            }
