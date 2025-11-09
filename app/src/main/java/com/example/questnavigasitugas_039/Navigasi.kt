@@ -22,3 +22,10 @@ data class FormData(
 )
 
 // --- DATA AWAL KITA PINDAHKAN KE SINI ---
+val initialDataList = listOf(
+    FormData("Lamin yamal", "Laki - Laki", "Cerai", "Sleman"),
+    FormData("Kasih rohimah", "Perempuan", "Lajang", "Bantul"),
+    FormData("Hamdan abdullah", "Laki - Laki", "Kawin", "Jogja")
+)
+// ---------------------------------------------
+
