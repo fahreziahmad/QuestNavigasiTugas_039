@@ -58,3 +58,19 @@ fun AppNavigation() {
             )
         }
 
+        // Rute untuk Layar Tampil Data
+        composable(AppRoutes.TAMPIL_DATA) {
+            TampilDataScreen(
+                // PERUBAHAN: Berikan daftar data saat ini ke layar
+                listPeserta = listPeserta.value,
+                onNavigateToDashboard = {
+                    navController.navigate(AppRoutes.DASHBOARD) {
+                        popUpTo(AppRoutes.DASHBOARD) { inclusive = true }
+                    }
+                },
+                onNavigateToForm = {
+                    navController.navigate(AppRoutes.FORMULIR)
+                }
+            )
+        }
+
