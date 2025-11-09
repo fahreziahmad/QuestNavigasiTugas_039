@@ -117,3 +117,19 @@ fun FormulirScreen(
                         unfocusedTrailingIconColor = Color.LightGray
                     )
                 )
+                ExposedDropdownMenu(
+                    expanded = statusDropdownExpanded,
+                    onDismissRequest = { statusDropdownExpanded = false },
+                    modifier = Modifier.background(Color(0xFF2C2C4E))
+                ) {
+                    statusOptions.forEach { option ->
+                        DropdownMenuItem(
+                            text = { Text(option, color = Color.White) },
+                            onClick = {
+                                selectedStatus = option
+                                statusDropdownExpanded = false
+                            }
+                        )
+                    }
+                }
+            }
