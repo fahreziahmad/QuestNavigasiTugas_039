@@ -68,3 +68,21 @@ fun DashboardScreen(
                 )
             }
 
+            Spacer(modifier = Modifier.height(24.dp)) // Jarak di atas tombol
+
+            Button(
+                onClick = { onNavigateToList() },
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(50.dp),
+                shape = RoundedCornerShape(16.dp),
+                colors = ButtonDefaults.buttonColors(
+                    // Warna tombol ini (ungu) akan terlihat bagus di latar gelap
+                    containerColor = Color(0xFF9D4EDD)
+                )
+            ) {
+                Text(text = "Masuk", fontSize = 18.sp)
+            }
+        }
+    }
+}
