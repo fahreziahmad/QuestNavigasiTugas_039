@@ -161,3 +161,14 @@ fun FormulirScreen(
                     Text(text = "Kembali", color = Color.LightGray, fontSize = 16.sp)
                 }
 
+                Spacer(modifier = Modifier.width(16.dp))
+
+                Button(
+                    // --- PERUBAHAN LOGIKA SUBMIT ---
+                    onClick = {
+                        // 1. Buat objek data baru
+                        val newData = FormData(
+                            nama = namaLengkap,
+                            gender = selectedJenisKelamin,
+                            status = selectedStatus,
+                            alamat = alamat
