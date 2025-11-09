@@ -25,3 +25,19 @@ fun TampilDataScreen(
     onNavigateToDashboard: () -> Unit,
     onNavigateToForm: () -> Unit
 ) {
+    Scaffold(
+        containerColor = Color(0xFF1A1A2E),
+        topBar = {
+            TopAppBar(
+                title = {
+                    Text(
+                        "List Daftar Peserta",
+                        fontWeight = FontWeight.Bold,
+                        color = Color(0xFF9D4EDD)
+                    )
+                },
+                colors = TopAppBarDefaults.topAppBarColors(
+                    containerColor = Color.Transparent
+                )
+            )
+        },
