@@ -63,4 +63,35 @@ fun TampilDataScreen(
     }
 }
 
-//
+// Sisa kode (ParticipantCard, InfoItem, BottomNavigation) tidak berubah
+@Composable
+fun ParticipantCard(data: FormData) {
+    Card(
+        modifier = Modifier.fillMaxWidth(),
+        shape = RoundedCornerShape(16.dp),
+        colors = CardDefaults.cardColors(
+            containerColor = Color(0xFF2C2C4E)
+        ),
+        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
+    ) {
+        Column(
+            modifier = Modifier.padding(16.dp),
+            verticalArrangement = Arrangement.spacedBy(12.dp)
+        ) {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween
+            ) {
+                InfoItem(label = "NAMA LENGKKAP", value = data.nama)
+                InfoItem(label = "JENIS KELAMIN", value = data.gender)
+            }
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween
+            ) {
+                InfoItem(label = "STATUS PERKAWINAN", value = data.status)
+                InfoItem(label = "ALAMAT", value = data.alamat)
+            }
+        }
+    }
+}
