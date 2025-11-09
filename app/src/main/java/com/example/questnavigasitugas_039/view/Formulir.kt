@@ -144,3 +144,20 @@ fun FormulirScreen(
 
             Spacer(modifier = Modifier.weight(1f))
 
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = 32.dp),
+                horizontalArrangement = Arrangement.SpaceBetween
+            ) {
+                Button(
+                    onClick = { onNavigateBack() },
+                    modifier = Modifier.weight(1f),
+                    shape = RoundedCornerShape(12.dp),
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = Color(0xFF2C2C4E)
+                    )
+                ) {
+                    Text(text = "Kembali", color = Color.LightGray, fontSize = 16.sp)
+                }
+
