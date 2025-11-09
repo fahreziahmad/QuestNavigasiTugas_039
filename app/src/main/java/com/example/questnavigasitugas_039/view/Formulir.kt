@@ -172,3 +172,24 @@ fun FormulirScreen(
                             gender = selectedJenisKelamin,
                             status = selectedStatus,
                             alamat = alamat
+                        )
+                        // 2. Panggil fungsi onAddData untuk "menyimpan"
+                        onAddData(newData)
+
+                        // 3. Simpan data untuk ditampilkan di dialog
+                        submittedData = newData
+
+                        // 4. Tampilkan dialog "Berhasil"
+                        showSuccessDialog = true
+                    },
+                    modifier = Modifier.weight(1f),
+                    shape = RoundedCornerShape(12.dp),
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = Color(0xFF9D4EDD)
+                    )
+                ) {
+                    Text(text = "Submit", fontSize = 16.sp)
+                }
+            }
+        }
+    }
