@@ -228,3 +228,19 @@ fun SuccessDialog(
                 }
             }
         },
+        confirmButton = {
+            Button(
+                onClick = { onDismiss() },
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color(0xFF9D4EDD)
+                )
+            ) {
+                Text("OK")
+            }
+        },
+        // Sesuaikan warna dialog dengan tema gelap
+        containerColor = Color(0xFF2C2C4E),
+        titleContentColor = Color.White,
+        textContentColor = Color.LightGray
+    )
+}
