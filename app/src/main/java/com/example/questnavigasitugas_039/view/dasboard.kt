@@ -32,3 +32,13 @@ fun DashboardScreen(
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
 
+            Text(
+                text = "Selamat Datang",
+                fontSize = 28.sp,
+                fontWeight = FontWeight.Bold,
+                // WARNA TEKS DIUBAH: Menjadi ungu terang agar terlihat di latar gelap
+                color = Color(0xFF9D4EDD)
+            )
+
+            Spacer(modifier = Modifier.height(64.dp)) // Jarak di atas logo
+
