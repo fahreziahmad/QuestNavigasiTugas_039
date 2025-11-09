@@ -29,3 +29,8 @@ val initialDataList = listOf(
 )
 // ---------------------------------------------
 
+object AppRoutes {
+    const val DASHBOARD = "dashboard"
+    const val TAMPIL_DATA = "tampil_data"
+    const val FORMULIR = "formulir"
+}
