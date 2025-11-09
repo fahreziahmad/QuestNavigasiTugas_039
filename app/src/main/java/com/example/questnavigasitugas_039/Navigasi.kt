@@ -74,3 +74,18 @@ fun AppNavigation() {
             )
         }
 
+        // Rute untuk Layar Formulir
+        composable(AppRoutes.FORMULIR) {
+            FormulirScreen(
+                onNavigateBack = {
+                    navController.popBackStack() // Kembali ke layar sebelumnya
+                },
+                // PERUBAHAN: Berikan "fungsi" untuk menambah data
+                onAddData = { newData ->
+                    // Ini adalah logika untuk "menyimpan" data baru
+                    listPeserta.value = listPeserta.value + newData
+                }
+            )
+        }
+    }
+}
