@@ -49,3 +49,7 @@ fun DashboardScreen(
                 contentDescription = "Logo Aplikasi",
                 modifier = Modifier.size(220.dp) // Ukuran logo diubah di sini
             )
+
+            // Spacer ini mendorong nama & tombol ke bawah
+            Spacer(modifier = Modifier.weight(1f))
+
