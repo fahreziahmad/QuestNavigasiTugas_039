@@ -34,3 +34,27 @@ object AppRoutes {
     const val TAMPIL_DATA = "tampil_data"
     const val FORMULIR = "formulir"
 }
+
+@Composable
+fun AppNavigation() {
+    val navController = rememberNavController()
+
+    // --- STATE UTAMA UNTUK MENYIMPAN DATA ---
+    val listPeserta = remember {
+        mutableStateOf(initialDataList)
+    }
+    // ----------------------------------------
+
+    NavHost(
+        navController = navController,
+        startDestination = AppRoutes.DASHBOARD
+    ) {
+        // Rute untuk Layar Dashboard
+        composable(AppRoutes.DASHBOARD) {
+            DashboardScreen(
+                onNavigateToList = {
+                    navController.navigate(AppRoutes.TAMPIL_DATA)
+                }
+            )
+        }
+
