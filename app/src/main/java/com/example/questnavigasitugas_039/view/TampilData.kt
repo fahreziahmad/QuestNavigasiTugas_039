@@ -136,3 +136,16 @@ fun BottomNavigation(
         ) {
             Text(text = "Beranda", color = Color.LightGray)
         }
+        Spacer(modifier = Modifier.width(16.dp))
+        Button(
+            onClick = { onNavigateToForm() },
+            modifier = Modifier.weight(1f),
+            shape = RoundedCornerShape(12.dp),
+            colors = ButtonDefaults.buttonColors(
+                containerColor = Color(0xFF2C2C4E)
+            )
+        ) {
+            Text(text = "Formulir", color = Color.LightGray)
+        }
+    }
+}
