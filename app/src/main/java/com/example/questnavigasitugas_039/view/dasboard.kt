@@ -42,3 +42,10 @@ fun DashboardScreen(
 
             Spacer(modifier = Modifier.height(64.dp)) // Jarak di atas logo
 
+            // UKURAN LOGO BARU: Diperbesar
+            Image(
+                // Ganti 'logoq' jika nama file Anda berbeda
+                painter = painterResource(id = R.drawable.logoq),
+                contentDescription = "Logo Aplikasi",
+                modifier = Modifier.size(220.dp) // Ukuran logo diubah di sini
+            )
