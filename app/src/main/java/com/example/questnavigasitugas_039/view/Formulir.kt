@@ -206,3 +206,25 @@ fun FormulirScreen(
     }
 }
 
+// --- FUNGSI BARU UNTUK DIALOG "BERHASIL" ---
+@Composable
+fun SuccessDialog(
+    formData: FormData?, // Data untuk ditampilkan
+    onDismiss: () -> Unit
+) {
+    AlertDialog(
+        onDismissRequest = { onDismiss() },
+        title = { Text("Berhasil", fontWeight = FontWeight.Bold, color = Color.White) },
+        text = {
+            Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                Text("Data berikut telah disimpan:", color = Color.LightGray)
+                Spacer(modifier = Modifier.height(8.dp))
+                // Tampilkan data yang baru saja dimasukkan
+                formData?.let {
+                    Text("Nama: ${it.nama}", color = Color.White)
+                    Text("Alamat: ${it.alamat}", color = Color.White)
+                    // Anda bisa tambahkan info lain jika mau
+                    // Text("Status: ${it.status}", color = Color.White)
+                }
+            }
+        },
