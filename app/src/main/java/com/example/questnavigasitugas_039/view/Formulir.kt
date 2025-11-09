@@ -89,3 +89,31 @@ fun FormulirScreen(
                     }
                 }
             }
+            Spacer(modifier = Modifier.height(16.dp))
+            Text("STATUS PERKAWINAN", style = MaterialTheme.typography.labelMedium, color = Color.LightGray)
+            ExposedDropdownMenuBox(
+                expanded = statusDropdownExpanded,
+                onExpandedChange = { statusDropdownExpanded = !statusDropdownExpanded }
+            ) {
+                OutlinedTextField(
+                    value = selectedStatus,
+                    onValueChange = {},
+                    readOnly = true,
+                    trailingIcon = {
+                        ExposedDropdownMenuDefaults.TrailingIcon(expanded = statusDropdownExpanded)
+                    },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .menuAnchor(),
+                    colors = OutlinedTextFieldDefaults.colors(
+                        focusedBorderColor = Color(0xFF9D4EDD),
+                        unfocusedBorderColor = Color.LightGray,
+                        focusedContainerColor = Color(0xFF2C2C4E),
+                        unfocusedContainerColor = Color(0xFF2C2C4E),
+                        focusedTextColor = Color.White,
+                        unfocusedTextColor = Color.White,
+                        disabledTrailingIconColor = Color.LightGray,
+                        focusedTrailingIconColor = Color.LightGray,
+                        unfocusedTrailingIconColor = Color.LightGray
+                    )
+                )
