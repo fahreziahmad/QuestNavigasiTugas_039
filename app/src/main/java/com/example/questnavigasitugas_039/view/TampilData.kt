@@ -126,3 +126,13 @@ fun BottomNavigation(
             .padding(horizontal = 16.dp, vertical = 12.dp),
         horizontalArrangement = Arrangement.SpaceEvenly
     ) {
+        Button(
+            onClick = { onNavigateToDashboard() },
+            modifier = Modifier.weight(1f),
+            shape = RoundedCornerShape(12.dp),
+            colors = ButtonDefaults.buttonColors(
+                containerColor = Color(0xFF2C2C4E)
+            )
+        ) {
+            Text(text = "Beranda", color = Color.LightGray)
+        }
