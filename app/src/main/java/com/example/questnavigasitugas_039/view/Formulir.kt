@@ -193,3 +193,16 @@ fun FormulirScreen(
             }
         }
     }
+
+    // --- KODE BARU UNTUK DIALOG ---
+    if (showSuccessDialog) {
+        SuccessDialog(
+            formData = submittedData, // Kirim data yang di-submit ke dialog
+            onDismiss = {
+                showSuccessDialog = false // Tutup dialog
+                onNavigateBack() // Navigasi kembali SETELAH dialog ditutup
+            }
+        )
+    }
+}
+
