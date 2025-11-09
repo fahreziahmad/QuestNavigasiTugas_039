@@ -133,3 +133,14 @@ fun FormulirScreen(
                     }
                 }
             }
+            Spacer(modifier = Modifier.height(16.dp))
+            FormTextField(
+                label = "ALAMAT",
+                value = alamat,
+                onValueChange = { alamat = it },
+                placeholder = "Isikan alamat"
+            )
+            // --- Akhir Form Input ---
+
+            Spacer(modifier = Modifier.weight(1f))
+
