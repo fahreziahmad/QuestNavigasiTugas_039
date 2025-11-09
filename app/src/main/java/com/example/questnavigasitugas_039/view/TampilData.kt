@@ -1,2 +1,27 @@
+// Nama File: TampilData.kt
 package com.example.questnavigasitugas_039.view
 
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.*
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+// PERUBAHAN: Import FormData dari package utama
+import com.example.questnavigasitugas_039.FormData
+
+// --- HAPUS 'data class FormData' DARI SINI ---
+// --- HAPUS 'val dataList' DARI SINI ---
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun TampilDataScreen(
+    listPeserta: List<FormData>, // PERUBAHAN: Menerima data dari luar
+    onNavigateToDashboard: () -> Unit,
+    onNavigateToForm: () -> Unit
+) {
