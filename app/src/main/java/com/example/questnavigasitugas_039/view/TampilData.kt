@@ -95,3 +95,22 @@ fun ParticipantCard(data: FormData) {
         }
     }
 }
+
+@Composable
+fun InfoItem(label: String, value: String) {
+    Column {
+        Text(
+            text = label,
+            fontSize = 12.sp,
+            color = Color(0xFF9D4EDD),
+            fontWeight = FontWeight.Bold
+        )
+        Text(
+            text = value,
+            fontSize = 16.sp,
+            color = Color.White,
+            fontWeight = FontWeight.Medium
+        )
+    }
+}
+
