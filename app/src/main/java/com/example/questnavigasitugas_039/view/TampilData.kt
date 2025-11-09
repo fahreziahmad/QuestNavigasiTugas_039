@@ -47,3 +47,20 @@ fun TampilDataScreen(
                 onNavigateToForm = onNavigateToForm
             )
         }
+    ) { paddingValues ->
+        LazyColumn(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(paddingValues)
+                .padding(horizontal = 16.dp),
+            verticalArrangement = Arrangement.spacedBy(16.dp)
+        ) {
+            // PERUBAHAN: Gunakan 'listPeserta' yang diterima
+            items(listPeserta) { data ->
+                ParticipantCard(data = data)
+            }
+        }
+    }
+}
+
+//
