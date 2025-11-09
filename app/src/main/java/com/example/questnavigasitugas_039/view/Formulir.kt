@@ -244,3 +244,31 @@ fun SuccessDialog(
         textContentColor = Color.LightGray
     )
 }
+
+// Komponen helper (tidak berubah)
+@Composable
+fun FormTextField(
+    label: String,
+    value: String,
+    onValueChange: (String) -> Unit,
+    placeholder: String
+) {
+    Text(label, style = MaterialTheme.typography.labelMedium, color = Color.LightGray)
+    OutlinedTextField(
+        value = value,
+        onValueChange = onValueChange,
+        placeholder = { Text(placeholder, color = Color.Gray) },
+        modifier = Modifier.fillMaxWidth(),
+        shape = RoundedCornerShape(8.dp),
+        colors = OutlinedTextFieldDefaults.colors(
+            focusedBorderColor = Color(0xFF9D4EDD),
+            unfocusedBorderColor = Color.LightGray,
+            focusedContainerColor = Color(0xFF2C2C4E),
+            unfocusedContainerColor = Color(0xFF2C2C4E),
+            focusedTextColor = Color.White,
+            unfocusedTextColor = Color.White,
+            focusedPlaceholderColor = Color.Gray,
+            unfocusedPlaceholderColor = Color.Gray
+        )
+    )
+}
