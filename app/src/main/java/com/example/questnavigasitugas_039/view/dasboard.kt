@@ -53,3 +53,18 @@ fun DashboardScreen(
             // Spacer ini mendorong nama & tombol ke bawah
             Spacer(modifier = Modifier.weight(1f))
 
+            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                Text(
+                    text = "Fahrezi Ahmad Syahyana",
+                    fontSize = 16.sp,
+                    // WARNA TEKS DIUBAH: Menjadi putih
+                    color = Color.White
+                )
+                Text(
+                    text = "20230140039",
+                    fontSize = 14.sp,
+                    // WARNA TEKS DIUBAH: Menjadi abu-abu terang
+                    color = Color.LightGray
+                )
+            }
+
