@@ -38,3 +38,22 @@ fun FormulirScreen(
     var submittedData by remember { mutableStateOf<FormData?>(null) }
     // --------------------------------
 
+    Scaffold(
+        containerColor = Color(0xFF1A1A2E)
+    ) { paddingValues ->
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(paddingValues)
+                .systemBarsPadding()
+                .padding(24.dp)
+                .verticalScroll(rememberScrollState())
+        ) {
+            Text(
+                text = "Formulir Pendaftaran",
+                fontSize = 24.sp,
+                fontWeight = FontWeight.Bold,
+                color = Color(0xFF9D4EDD),
+                modifier = Modifier.padding(bottom = 24.dp)
+            )
+
